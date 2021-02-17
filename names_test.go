@@ -20,9 +20,15 @@ func TestDockerNames(t *testing.T) {
 }
 
 func TestMultipleNames(t *testing.T) {
-	for i:=0; i<1000; i++ {
+	for i := 0; i < 1000; i++ {
 		fmt.Println(GetFirstName())
 		fmt.Println(GetSurname())
 		fmt.Println(GetName())
+	}
+}
+
+func TestSentence(t *testing.T) {
+	for i := 0; i < 1000; i++ {
+		fmt.Println(MakeSentence2())
 	}
 }

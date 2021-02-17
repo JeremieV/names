@@ -3,6 +3,7 @@ package names
 
 import (
 	"math/rand"
+	"strings"
 	"time"
 
 	"github.com/moby/moby/pkg/namesgenerator"
@@ -29,6 +30,26 @@ func GetSurname() string {
 func GetName() string {
 	rand.Seed(time.Now().UnixNano())
 	return firstNames[rand.Intn(len(firstNames))] + " " + lastNames[rand.Intn(len(lastNames))]
+}
+
+// MakeSentence1 returns a mock sentence
+func MakeSentence1() string {
+	rand.Seed(time.Now().UnixNano())
+	noun := strings.Title(nouns[rand.Intn(len(nouns))])
+	adverb := adverbs[rand.Intn(len(adverbs))]
+	adjective := adjectives[rand.Intn(len(adjectives))]
+	sentence := noun + " is " + adverb + " " + adjective + "."
+	return sentence
+}
+
+// MakeSentence2 returns a mock sentence
+func MakeSentence2() string {
+	rand.Seed(time.Now().UnixNano())
+	noun := nouns[rand.Intn(len(nouns))]
+	adverb := strings.Title(adverbs[rand.Intn(len(adverbs))])
+	adjective := adjectives[rand.Intn(len(adjectives))]
+	sentence := adverb + ", " + noun + " is " + adjective + "."
+	return sentence
 }
 
 var (
