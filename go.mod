@@ -1,4 +1,4 @@
-module names
+module github.com/jeremiev/names
 
 go 1.15
 
