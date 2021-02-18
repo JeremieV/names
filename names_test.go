@@ -29,6 +29,6 @@ func TestMultipleNames(t *testing.T) {
 
 func TestSentence(t *testing.T) {
 	for i := 0; i < 1000; i++ {
-		fmt.Println(MakeSentence2())
+		fmt.Println(MakeSentence1())
 	}
 }
